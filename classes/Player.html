@@ -199,7 +199,7 @@ var player = new Clappr.Player({source: &quot;http://your.video/here.mp4&quot;, 
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_components_player.js.html#l77"><code>src&#x2F;components&#x2F;player.js:77</code></a>
+        <a href="../files/src_components_player.js.html#l85"><code>src&#x2F;components&#x2F;player.js:85</code></a>
         </p>
 
 
@@ -241,6 +241,10 @@ You can use this method to attach the player to a given <code>element</code>. Yo
                 <li class="arg">
                         <code>options</code>
                 </li>
+                <li class="arg">
+                        <code>[options.preload]
+video will be [preloaded]</code>
+                </li>
             </ul><span class="paren">)</span>
         </div>
 
@@ -262,7 +266,7 @@ You can use this method to attach the player to a given <code>element</code>. Yo
     </div>
 
     <div class="description">
-        <h2>Player constructor</h2>
+        <h2>Player's constructor</h2>
 <p>You must pass the options object to build the player.</p>
 <pre class="code prettyprint"><code class="language-javascript">var options = {source: &quot;http://example.com/video.mp4&quot;, param1: &quot;val1&quot;};
 var player = new Clappr.Player(options);
@@ -364,12 +368,34 @@ options to build a player instance</p>
 
                             </li>
                             <li class="param">
-                                    <code class="param-name optional">[persistConfig]</code>
-                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                                    <code class="param-name optional">[maxBufferLength]</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
                                     <span class="flag optional" title="This parameter is optional.">optional</span>
 
                                 <div class="param-description">
-                                    <p>persist player's settings (volume) <strong>default</strong>: <code>true</code></p>
+                                    <p>the default behavior for the <strong>HLS playback</strong> is to keep buffering indefinitely, even on VoD. This replicates the behavior for progressive download, which continues buffering when pausing the video, thus making the video available for playback even on slow networks. To change this behavior use <code>maxBufferLength</code> where <strong>value is in seconds</strong>.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name optional">[gaAccount]</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+
+                                <div class="param-description">
+                                    <p>enable Google Analytics events dispatch <strong>(play/pause/stop/buffering/etc)</strong> by adding your <code>gaAccount</code></p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name optional">[gaTrackerName]</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+
+                                <div class="param-description">
+                                    <p>besides <code>gaAccount</code> you can optionally, pass your favorite trackerName as <code>gaTrackerName</code></p>
 
                                 </div>
 
@@ -380,12 +406,35 @@ options to build a player instance</p>
                                     <span class="flag optional" title="This parameter is optional.">optional</span>
 
                                 <div class="param-description">
-                                    <p>Define a poster by adding its address <code>http://url/img.png</code> on your embed parameters. It will appear after video embed, disappear on play and go back when user stops the video.</p>
+                                    <p>define a poster by adding its address <code>http://url/img.png</code>. It will appear after video embed, disappear on play and go back when user stops the video.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name optional">[poster]</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+
+                                <div class="param-description">
+                                    <p>define a poster by adding its address <code>http://url/img.png</code>. It will appear after video embed, disappear on play and go back when user stops the video.</p>
 
                                 </div>
 
                             </li>
                         </ul>
+                </li>
+                <li class="param">
+                        <code class="param-name">[options.preload]
+video will be [preloaded]</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+
+
+                    <div class="param-description">
+                        <p>(<a href="http://www.stevesouders.com/blog/2013/04/12/html5-video-preload/">http://www.stevesouders.com/blog/2013/04/12/html5-video-preload/</a>) according to <code>preload</code> attribute options</p>
+
+                    </div>
+
                 </li>
             </ul>
         </div>
