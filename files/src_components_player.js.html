@@ -105,56 +105,23 @@ var PlayerInfo = require(&#x27;./player_info&#x27;)
  * @extends BaseObject
  * @module components
  * @example
- *  ### Using the Player
- *
- *  [![Join the chat at https://gitter.im/clappr/clappr](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/clappr/clappr?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge)
- *
- *  Add the following script on your HTML:
- *  &#x60;&#x60;&#x60;html
- *  &lt;head&gt;
- *    &lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.clappr.io/latest/clappr.min.js&quot;&gt;&lt;/script&gt;
- *  &lt;/head&gt;
- *  &#x60;&#x60;&#x60;
- *  Now, create the player:
- *  &#x60;&#x60;&#x60;html
- *  &lt;body&gt;
- *    &lt;div id=&quot;player&quot;&gt;&lt;/div&gt;
- *    &lt;script&gt;
- *      var player = new Clappr.Player({source: &quot;http://your.video/here.mp4&quot;, parentId: &quot;#player&quot;});
- *    &lt;/script&gt;
- *  &lt;/body&gt;
- *  &#x60;&#x60;&#x60;
+ *     // Creates an instance:
+ *     var player = new Clappr.Player({source: &quot;http://your.video/here.mp4&quot;, parentId: &quot;#player&quot;});
  */
 class Player extends BaseObject {
 
   /**
-   * ## Player constructor
-   *
-   * You must pass the options object to build the player.
-   * &#x60;&#x60;&#x60;javascript
-   * var options = {source: &quot;http://example.com/video.mp4&quot;, param1: &quot;val1&quot;};
-   * var player = new Clappr.Player(options);
-   * &#x60;&#x60;&#x60;
+   * constructor.
    *
    * @method constructor
-   * @param {Object} options
-   * options to build a player instance
-   * @param {Number} [options.width]
-   * player&#x27;s width
-   * @param {Number} [options.height]
-   * player&#x27;s height
+   * @param {Object} options Data
+   * to configure player instance
    * @param {Boolean} [options.autoPlay]
-   * automatically play after page load
-   * @param {Boolean} [options.loop]
-   * automatically replay after it ends
-   * @param {Boolean} [options.chromeless]
-   * player acts in chromeless mode
-   * @param {Boolean} [options.muted]
-   * start the video muted
-   * @param {Boolean} [options.persistConfig]
-   * persist player&#x27;s settings (volume) **default**: &#x60;true&#x60;
-   * @param {Boolean} [options.persistConfig]
-   * persist player&#x27;s settings (volume) **default**: &#x60;true&#x60;
+   * @default false
+   * if you want the video to automatically play after page load.
+   * @param {Boolean} [options.mute]
+   * @default false
+   * if you want the video to start muted.
    * @param {String} [options.poster]
    * Define a poster by adding its address &#x60;http://url/img.png&#x60; on your embed parameters. It will appear after video embed, disappear on play and go back when user stops the video.
    */

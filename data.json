@@ -188,7 +188,7 @@
             "is_constructor": 1,
             "extends": "BaseObject",
             "example": [
-                "\n ### Using the Player\n\n [![Join the chat at https://gitter.im/clappr/clappr](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/clappr/clappr?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\n\n Add the following script on your HTML:\n ```html\n <head>\n   <script type=\"text/javascript\" src=\"http://cdn.clappr.io/latest/clappr.min.js\"></script>\n </head>\n ```\n Now, create the player:\n ```html\n <body>\n   <div id=\"player\"></div>\n   <script>\n     var player = new Clappr.Player({source: \"http://your.video/here.mp4\", parentId: \"#player\"});\n   </script>\n </body>\n ```"
+                "\n    // Creates an instance:\n    var player = new Clappr.Player({source: \"http://your.video/here.mp4\", parentId: \"#player\"});"
             ]
         },
         "HLS": {
@@ -316,77 +316,44 @@
         },
         {
             "file": "src/components/player.js",
-            "line": 42,
-            "description": "## Player constructor\n\nYou must pass the options object to build the player.\n```javascript\nvar options = {source: \"http://example.com/video.mp4\", param1: \"val1\"};\nvar player = new Clappr.Player(options);\n```",
+            "line": 25,
+            "description": "constructor.",
             "itemtype": "method",
             "name": "constructor",
             "params": [
                 {
-                    "name": "options\noptions",
-                    "description": "to build a player instance",
-                    "type": "Object"
-                },
-                {
-                    "name": "options.width",
-                    "description": "\nplayer's width",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "options.height",
-                    "description": "\nplayer's height",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "options.autoPlay",
-                    "description": "\nautomatically play after page load",
-                    "type": "Boolean",
-                    "optional": true
-                },
-                {
-                    "name": "options.loop",
-                    "description": "\nautomatically replay after it ends",
-                    "type": "Boolean",
-                    "optional": true
-                },
-                {
-                    "name": "options.chromeless",
-                    "description": "\nplayer acts in chromeless mode",
-                    "type": "Boolean",
-                    "optional": true
-                },
-                {
-                    "name": "options.muted",
-                    "description": "\nstart the video muted",
-                    "type": "Boolean",
-                    "optional": true
-                },
-                {
-                    "name": "options.persistConfig",
-                    "description": "\npersist player's settings (volume) **default**: `true`",
-                    "type": "Boolean",
-                    "optional": true
-                },
-                {
-                    "name": "options.persistConfig",
-                    "description": "\npersist player's settings (volume) **default**: `true`",
-                    "type": "Boolean",
-                    "optional": true
-                },
-                {
-                    "name": "options.poster",
-                    "description": "\nDefine a poster by adding its address `http://url/img.png` on your embed parameters. It will appear after video embed, disappear on play and go back when user stops the video.",
-                    "type": "String",
-                    "optional": true
+                    "name": "options",
+                    "description": "Data\nto configure player instance",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "autoPlay",
+                            "description": "",
+                            "type": "Boolean",
+                            "optional": true
+                        },
+                        {
+                            "name": "mute",
+                            "description": "",
+                            "type": "Boolean",
+                            "optional": true
+                        },
+                        {
+                            "name": "poster",
+                            "description": "\nDefine a poster by adding its address `http://url/img.png` on your embed parameters. It will appear after video embed, disappear on play and go back when user stops the video.",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
                 }
             ],
+            "default": "false\nif you want the video to start muted.",
             "class": "Player",
             "module": "components"
         },
         {
             "file": "src/components/player.js",
-            "line": 94,
+            "line": 61,
             "description": "attach player to element",
             "itemtype": "method",
             "name": "attachTo",

@@ -137,21 +137,8 @@
             <h4>Example:</h4>
 
             <div class="example-content">
-                <h3>Using the Player</h3>
-<p><a href="https://gitter.im/clappr/clappr?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/clappr/clappr"></a></p>
-<p>Add the following script on your HTML:</p>
-<pre class="code prettyprint"><code class="language-html">&lt;head&gt;
-  &lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.clappr.io/latest/clappr.min.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-</code></pre>
-<p>Now, create the player:</p>
-<pre class="code prettyprint"><code class="language-html">&lt;body&gt;
-  &lt;div id=&quot;player&quot;&gt;&lt;/div&gt;
-  &lt;script&gt;
-    var player = new Clappr.Player({source: &quot;http://your.video/here.mp4&quot;, parentId: &quot;#player&quot;});
-  &lt;/script&gt;
-&lt;/body&gt;
-</code></pre>
+                <pre class="code prettyprint"><code>// Creates an instance:
+var player = new Clappr.Player({source: &quot;http://your.video/here.mp4&quot;, parentId: &quot;#player&quot;});</code></pre>
 
             </div>
         </div>
@@ -212,7 +199,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_components_player.js.html#l94"><code>src&#x2F;components&#x2F;player.js:94</code></a>
+        <a href="../files/src_components_player.js.html#l61"><code>src&#x2F;components&#x2F;player.js:61</code></a>
         </p>
 
 
@@ -252,35 +239,7 @@ You can use this method to attach the player to a given <code>element</code>. Yo
         <div class="args">
             <span class="paren">(</span><ul class="args-list inline commas">
                 <li class="arg">
-                        <code>options
-options</code>
-                </li>
-                <li class="arg">
-                        <code class="optional">[options.width]</code>
-                </li>
-                <li class="arg">
-                        <code class="optional">[options.height]</code>
-                </li>
-                <li class="arg">
-                        <code class="optional">[options.autoPlay]</code>
-                </li>
-                <li class="arg">
-                        <code class="optional">[options.loop]</code>
-                </li>
-                <li class="arg">
-                        <code class="optional">[options.chromeless]</code>
-                </li>
-                <li class="arg">
-                        <code class="optional">[options.muted]</code>
-                </li>
-                <li class="arg">
-                        <code class="optional">[options.persistConfig]</code>
-                </li>
-                <li class="arg">
-                        <code class="optional">[options.persistConfig]</code>
-                </li>
-                <li class="arg">
-                        <code class="optional">[options.poster]</code>
+                        <code>options</code>
                 </li>
             </ul><span class="paren">)</span>
         </div>
@@ -295,7 +254,7 @@ options</code>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_components_player.js.html#l42"><code>src&#x2F;components&#x2F;player.js:42</code></a>
+        <a href="../files/src_components_player.js.html#l25"><code>src&#x2F;components&#x2F;player.js:25</code></a>
         </p>
 
 
@@ -303,11 +262,7 @@ options</code>
     </div>
 
     <div class="description">
-        <h2>Player constructor</h2>
-<p>You must pass the options object to build the player.</p>
-<pre class="code prettyprint"><code class="language-javascript">var options = {source: &quot;http://example.com/video.mp4&quot;, param1: &quot;val1&quot;};
-var player = new Clappr.Player(options);
-</code></pre>
+        <p>constructor.</p>
 
     </div>
 
@@ -316,124 +271,49 @@ var player = new Clappr.Player(options);
 
             <ul class="params-list">
                 <li class="param">
-                        <code class="param-name">options
-options</code>
+                        <code class="param-name">options</code>
                         <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
 
 
                     <div class="param-description">
-                        <p>to build a player instance</p>
+                        <p>Data
+to configure player instance</p>
 
                     </div>
 
-                </li>
-                <li class="param">
-                        <code class="param-name optional">[options.width]</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name optional">[autoPlay]</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
 
+                                <div class="param-description">
+                                    
+                                </div>
 
-                    <div class="param-description">
-                        <p>player's width</p>
+                            </li>
+                            <li class="param">
+                                    <code class="param-name optional">[mute]</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
 
-                    </div>
+                                <div class="param-description">
+                                    
+                                </div>
 
-                </li>
-                <li class="param">
-                        <code class="param-name optional">[options.height]</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number" class="crosslink external" target="_blank">Number</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
+                            </li>
+                            <li class="param">
+                                    <code class="param-name optional">[poster]</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
 
+                                <div class="param-description">
+                                    <p>Define a poster by adding its address <code>http://url/img.png</code> on your embed parameters. It will appear after video embed, disappear on play and go back when user stops the video.</p>
 
-                    <div class="param-description">
-                        <p>player's height</p>
+                                </div>
 
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name optional">[options.autoPlay]</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
-
-
-                    <div class="param-description">
-                        <p>automatically play after page load</p>
-
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name optional">[options.loop]</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
-
-
-                    <div class="param-description">
-                        <p>automatically replay after it ends</p>
-
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name optional">[options.chromeless]</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
-
-
-                    <div class="param-description">
-                        <p>player acts in chromeless mode</p>
-
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name optional">[options.muted]</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
-
-
-                    <div class="param-description">
-                        <p>start the video muted</p>
-
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name optional">[options.persistConfig]</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
-
-
-                    <div class="param-description">
-                        <p>persist player's settings (volume) <strong>default</strong>: <code>true</code></p>
-
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name optional">[options.persistConfig]</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
-
-
-                    <div class="param-description">
-                        <p>persist player's settings (volume) <strong>default</strong>: <code>true</code></p>
-
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name optional">[options.poster]</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
-
-
-                    <div class="param-description">
-                        <p>Define a poster by adding its address <code>http://url/img.png</code> on your embed parameters. It will appear after video embed, disappear on play and go back when user stops the video.</p>
-
-                    </div>
-
+                            </li>
+                        </ul>
                 </li>
             </ul>
         </div>
