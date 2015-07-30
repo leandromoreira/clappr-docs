@@ -111,17 +111,33 @@ var PlayerInfo = require(&#x27;./player_info&#x27;)
 class Player extends BaseObject {
 
   /**
-   * constructor.
+   * ## Player constructor
+   *
+   * You must pass the options object to build the player.
+   * &#x60;&#x60;&#x60;javascript
+   * var options = {source: &quot;http://example.com/video.mp4&quot;, param1: &quot;val1&quot;};
+   * var player = new Clappr.Player(options);
+   * &#x60;&#x60;&#x60;
    *
    * @method constructor
    * @param {Object} options Data
-   * to configure player instance
+   * options to build a player instance
+   * @param {Number} [options.width]
+   * player&#x27;s width
+   * @param {Number} [options.height]
+   * player&#x27;s height
    * @param {Boolean} [options.autoPlay]
-   * @default false
-   * if you want the video to automatically play after page load.
-   * @param {Boolean} [options.mute]
-   * @default false
-   * if you want the video to start muted.
+   * automatically play after page load
+   * @param {Boolean} [options.loop]
+   * automatically replay after it ends
+   * @param {Boolean} [options.chromeless]
+   * player acts in chromeless mode
+   * @param {Boolean} [options.muted]
+   * start the video muted
+   * @param {Boolean} [options.persistConfig]
+   * persist player&#x27;s settings (volume) **default**: &#x60;true&#x60;
+   * @param {Boolean} [options.persistConfig]
+   * persist player&#x27;s settings (volume) **default**: &#x60;true&#x60;
    * @param {String} [options.poster]
    * Define a poster by adding its address &#x60;http://url/img.png&#x60; on your embed parameters. It will appear after video embed, disappear on play and go back when user stops the video.
    */

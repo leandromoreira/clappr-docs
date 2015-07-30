@@ -317,24 +317,60 @@
         {
             "file": "src/components/player.js",
             "line": 25,
-            "description": "constructor.",
+            "description": "## Player constructor\n\nYou must pass the options object to build the player.\n```javascript\nvar options = {source: \"http://example.com/video.mp4\", param1: \"val1\"};\nvar player = new Clappr.Player(options);\n```",
             "itemtype": "method",
             "name": "constructor",
             "params": [
                 {
                     "name": "options",
-                    "description": "Data\nto configure player instance",
+                    "description": "Data\noptions to build a player instance",
                     "type": "Object",
                     "props": [
                         {
+                            "name": "width",
+                            "description": "\nplayer's width",
+                            "type": "Number",
+                            "optional": true
+                        },
+                        {
+                            "name": "height",
+                            "description": "\nplayer's height",
+                            "type": "Number",
+                            "optional": true
+                        },
+                        {
                             "name": "autoPlay",
-                            "description": "",
+                            "description": "\nautomatically play after page load",
                             "type": "Boolean",
                             "optional": true
                         },
                         {
-                            "name": "mute",
-                            "description": "",
+                            "name": "loop",
+                            "description": "\nautomatically replay after it ends",
+                            "type": "Boolean",
+                            "optional": true
+                        },
+                        {
+                            "name": "chromeless",
+                            "description": "\nplayer acts in chromeless mode",
+                            "type": "Boolean",
+                            "optional": true
+                        },
+                        {
+                            "name": "muted",
+                            "description": "\nstart the video muted",
+                            "type": "Boolean",
+                            "optional": true
+                        },
+                        {
+                            "name": "persistConfig",
+                            "description": "\npersist player's settings (volume) **default**: `true`",
+                            "type": "Boolean",
+                            "optional": true
+                        },
+                        {
+                            "name": "persistConfig",
+                            "description": "\npersist player's settings (volume) **default**: `true`",
                             "type": "Boolean",
                             "optional": true
                         },
@@ -347,13 +383,12 @@
                     ]
                 }
             ],
-            "default": "false\nif you want the video to start muted.",
             "class": "Player",
             "module": "components"
         },
         {
             "file": "src/components/player.js",
-            "line": 61,
+            "line": 77,
             "description": "attach player to element",
             "itemtype": "method",
             "name": "attachTo",
