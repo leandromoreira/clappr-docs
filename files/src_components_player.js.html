@@ -105,8 +105,25 @@ var PlayerInfo = require(&#x27;./player_info&#x27;)
  * @extends BaseObject
  * @module components
  * @example
- *     // Creates an instance:
- *     var player = new Clappr.Player({source: &quot;http://your.video/here.mp4&quot;, parentId: &quot;#player&quot;});
+ *  ### Using the Player
+ *
+ *  [![Join the chat at https://gitter.im/clappr/clappr](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/clappr/clappr?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge)
+ *
+ *  Add the following script on your HTML:
+ *  &#x60;&#x60;&#x60;html
+ *  &lt;head&gt;
+ *    &lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.clappr.io/latest/clappr.min.js&quot;&gt;&lt;/script&gt;
+ *  &lt;/head&gt;
+ *  &#x60;&#x60;&#x60;
+ *  Now, create the player:
+ *  &#x60;&#x60;&#x60;html
+ *  &lt;body&gt;
+ *    &lt;div id=&quot;player&quot;&gt;&lt;/div&gt;
+ *    &lt;script&gt;
+ *      var player = new Clappr.Player({source: &quot;http://your.video/here.mp4&quot;, parentId: &quot;#player&quot;});
+ *    &lt;/script&gt;
+ *  &lt;/body&gt;
+ *  &#x60;&#x60;&#x60;
  */
 class Player extends BaseObject {
 

@@ -188,7 +188,7 @@
             "is_constructor": 1,
             "extends": "BaseObject",
             "example": [
-                "\n    // Creates an instance:\n    var player = new Clappr.Player({source: \"http://your.video/here.mp4\", parentId: \"#player\"});"
+                "\n ### Using the Player\n\n [![Join the chat at https://gitter.im/clappr/clappr](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/clappr/clappr?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\n\n Add the following script on your HTML:\n ```html\n <head>\n   <script type=\"text/javascript\" src=\"http://cdn.clappr.io/latest/clappr.min.js\"></script>\n </head>\n ```\n Now, create the player:\n ```html\n <body>\n   <div id=\"player\"></div>\n   <script>\n     var player = new Clappr.Player({source: \"http://your.video/here.mp4\", parentId: \"#player\"});\n   </script>\n </body>\n ```"
             ]
         },
         "HLS": {
@@ -316,7 +316,7 @@
         },
         {
             "file": "src/components/player.js",
-            "line": 25,
+            "line": 42,
             "description": "constructor.",
             "itemtype": "method",
             "name": "constructor",
@@ -353,7 +353,7 @@
         },
         {
             "file": "src/components/player.js",
-            "line": 61,
+            "line": 78,
             "description": "attach player to element",
             "itemtype": "method",
             "name": "attachTo",
