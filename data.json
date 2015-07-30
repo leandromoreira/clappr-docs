@@ -370,7 +370,7 @@
                         },
                         {
                             "name": "preload",
-                            "description": "\nvideo will be preloaded according to `preload` attribute options **default**: 'metadata'",
+                            "description": "\nvideo will be preloaded according to `preload` attribute options **default**: `'metadata'`",
                             "type": "String",
                             "optional": true
                         },
@@ -397,14 +397,13 @@
                             "description": "\ndefine a poster by adding its address `http://url/img.png`. It will appear after video embed, disappear on play and go back when user stops the video.",
                             "type": "String",
                             "optional": true
-                        },
-                        {
-                            "name": "poster",
-                            "description": "\ndefine a poster by adding its address `http://url/img.png`. It will appear after video embed, disappear on play and go back when user stops the video.",
-                            "type": "String",
-                            "optional": true
                         }
                     ]
+                },
+                {
+                    "name": "[options.mediacontrol]\ncustomize control bar colors, example:\n\n```javascript\n  var player = new Clappr.Player({\n    source: \"http://your.video/here.mp4\",\n    mediacontrol: {seekbar: \"#E113D3\", buttons: \"#66B2FF\"}\n  });\n```\nResult:\n\n![Clappr with modified media control colors]",
+                    "description": "(https://s3.amazonaws.com/cdn.clappr.io/screenshot.png)",
+                    "type": "Object"
                 }
             ],
             "class": "Player",
@@ -412,7 +411,7 @@
         },
         {
             "file": "src/components/player.js",
-            "line": 85,
+            "line": 95,
             "description": "attach player to element",
             "itemtype": "method",
             "name": "attachTo",
